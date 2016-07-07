@@ -1,5 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="hello">Hello World, Click Me!</string>
+	<string name="loginApp">Login to Graph API</string>
+	<string name="loginBackend">Login to backend</string>
 	<string name="app_name">AzureAdMobile.Droid</string>
+	<string name="logout">Logout</string>
+	<string name="compareTokens">Compare Access Tokens</string>
+	<string name="callBasic">Basic Role Endpoint</string>
+	<string name="callBasicGroup">Basic Group Endpoint</string>
+	<string name="callElevated">Elevated Role Endpoint</string>
+	<string name="callElevatedGroup">Elevated Group Endpoint</string>
 </resources>

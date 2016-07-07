@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:scrollbars="vertical">
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:padding="16dp">
+		<TextView
+			android:id="@+id/title"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textSize="24sp" />
+		<Button
+			android:id="@+id/loginApp"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/loginApp" />
+		<Button
+			android:id="@+id/loginBackend"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/loginBackend" />
+		<Button
+			android:id="@+id/compareTokens"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/compareTokens" />
+		<Button
+			android:id="@+id/logout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/logout" />
+		<TextView
+			android:id="@+id/console"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textIsSelectable="true" />
+		<LinearLayout
+			android:id="@+id/consoleLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+			<TextView
+				android:id="@+id/accessTokenType"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" />
+			<TextView
+				android:id="@+id/accessToken"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:ellipsize="end"
+				android:singleLine="true" />
+			<TextView
+				android:id="@+id/expiresOn"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" />
+			<TextView
+				android:id="@+id/tenantId"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" />
+			<TextView
+				android:id="@+id/idToken"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:ellipsize="end"
+				android:singleLine="true" />
+			<TextView
+				android:id="@+id/userUniqueId"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" />
+			<TextView
+				android:id="@+id/userDisplayableId"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" />
+			<TextView
+				android:id="@+id/userGivenName"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" />
+			<TextView
+				android:id="@+id/userFamilyName"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" />
+			<TextView
+				android:id="@+id/userIdentityProvider"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content" />
+		</LinearLayout>
+	</LinearLayout>
+</ScrollView>
