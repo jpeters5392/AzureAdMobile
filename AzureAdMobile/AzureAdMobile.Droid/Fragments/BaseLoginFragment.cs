@@ -90,7 +90,7 @@ namespace AzureAdMobile.Droid.Fragments
 		{
 			try
 			{
-				if (await Login(MainActivity.BackendResourceUri, false))
+				if (await Login(AzureConstants.BackendResourceUri, false))
 				{
 					this.logout.Enabled = true;
 					this.loginBackendButton.Enabled = false;
@@ -105,7 +105,7 @@ namespace AzureAdMobile.Droid.Fragments
 		{
 			try
 			{
-				if (await Login(MainActivity.AppResourceUri, true))
+				if (await Login(AzureConstants.AppResourceUri, true))
 				{
 					this.logout.Enabled = true;
 					this.loginAppButton.Enabled = false;
@@ -135,7 +135,7 @@ namespace AzureAdMobile.Droid.Fragments
 
 		protected async Task<AuthenticationResult> PerformAuth(string resourceId)
 		{
-			var authContext = new AuthenticationContext(string.Format(MainActivity.AzureAuthority, MainActivity.AzureTenantId));
+			var authContext = new AuthenticationContext(string.Format(AzureConstants.AzureAuthority, AzureConstants.AzureTenantId));
 
 			try
 			{
@@ -153,16 +153,16 @@ namespace AzureAdMobile.Droid.Fragments
 				else
 				{
 					// there is no current user so force UI authentication instead of using UserIdentifier.AnyUser
-					return await authContext.AcquireTokenAsync(resourceId, MainActivity.AzureClientId, new Uri(MainActivity.AzureAdRedirectUri), platformParameters, UserIdentifier.AnyUser, MainActivity.AzureDomainHint);
+					return await authContext.AcquireTokenAsync(resourceId, AzureConstants.AzureClientId, new Uri(AzureConstants.AzureAdRedirectUri), platformParameters, UserIdentifier.AnyUser, AzureConstants.AzureDomainHint);
 				}
 
 				// we know what user is logged in so try to acquire a silent token for them
-				return await authContext.AcquireTokenSilentAsync(resourceId, MainActivity.AzureClientId, userIdentifier, this.platformParameters);
+				return await authContext.AcquireTokenSilentAsync(resourceId, AzureConstants.AzureClientId, userIdentifier, this.platformParameters);
 			}
 			catch (AdalSilentTokenAcquisitionException)
 			{
 				// perform UI based authentication
-				return await authContext.AcquireTokenAsync(resourceId, MainActivity.AzureClientId, new Uri(MainActivity.AzureAdRedirectUri), platformParameters, UserIdentifier.AnyUser, MainActivity.AzureDomainHint);
+				return await authContext.AcquireTokenAsync(resourceId, AzureConstants.AzureClientId, new Uri(AzureConstants.AzureAdRedirectUri), platformParameters, UserIdentifier.AnyUser, AzureConstants.AzureDomainHint);
 			}
 		}
 
