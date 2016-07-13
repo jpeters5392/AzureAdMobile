@@ -131,13 +131,13 @@
                                 <state key="normal" title="Login to App">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <constraints>
-                                    <constraint id="166" firstItem="144" firstAttribute="height" constant="30"/>
-                                    <constraint id="185" firstItem="144" firstAttribute="width" constant="166"/>
-                                </constraints>
                                 <connections>
                                     <action selector="OnAppLoginTouchUpInside:" destination="100" id="191" eventType="touchUpInside"/>
                                 </connections>
+                                <constraints>
+                                    <constraint id="209" firstItem="144" firstAttribute="height" constant="30"/>
+                                    <constraint id="210" firstItem="144" firstAttribute="width" constant="166"/>
+                                </constraints>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="145" translatesAutoresizingMaskIntoConstraints="NO">
                                 <rect key="frame" x="194" y="20" width="161" height="30"/>
@@ -152,7 +152,7 @@
                                     <action selector="OnBackendLoginTouchUpInside:" destination="100" id="192" eventType="touchUpInside"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="146" translatesAutoresizingMaskIntoConstraints="NO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="146" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
                                 <rect key="frame" x="20" y="58" width="166" height="30"/>
                                 <state key="normal" title="Basic Group">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -178,7 +178,7 @@
                                     <action selector="OnBasicRoleTouchUpInside:" destination="100" id="194" eventType="touchUpInside"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="148" translatesAutoresizingMaskIntoConstraints="NO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="148" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
                                 <rect key="frame" x="20" y="96" width="166" height="30"/>
                                 <state key="normal" title="Elevated Group">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -204,7 +204,7 @@
                                     <action selector="OnElevatedRoleTouchUpInside:" destination="100" id="196" eventType="touchUpInside"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="150" translatesAutoresizingMaskIntoConstraints="NO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="150" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
                                 <rect key="frame" x="20" y="134" width="335" height="30"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -216,7 +216,7 @@
                                     <action selector="OnLogoutTouchUpInside:" destination="100" id="198" eventType="touchUpInside"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="151" translatesAutoresizingMaskIntoConstraints="NO" text="Console Output..." editable="NO">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="151" translatesAutoresizingMaskIntoConstraints="NO" text="Console Output..." editable="NO" misplaced="YES">
                                 <rect key="frame" x="20" y="172" width="329" height="435"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -224,8 +224,6 @@
                             </textView>
                         </subviews>
                         <constraints>
-                            <constraint id="152" firstItem="144" firstAttribute="top" secondItem="93" secondAttribute="bottom"/>
-                            <constraint id="153" firstItem="144" firstAttribute="leading" secondItem="108" secondAttribute="leading" constant="20"/>
                             <constraint id="154" firstItem="145" firstAttribute="top" secondItem="93" secondAttribute="bottom"/>
                             <constraint id="155" firstItem="108" firstAttribute="trailing" secondItem="145" secondAttribute="trailing" constant="20"/>
                             <constraint id="156" firstItem="147" firstAttribute="top" secondItem="145" secondAttribute="bottom" constant="8"/>
@@ -234,19 +232,18 @@
                             <constraint id="159" firstItem="108" firstAttribute="trailing" secondItem="149" secondAttribute="trailing" constant="26"/>
                             <constraint id="160" firstItem="148" firstAttribute="top" secondItem="146" secondAttribute="bottom" constant="8"/>
                             <constraint id="161" firstItem="148" firstAttribute="leading" secondItem="108" secondAttribute="leading" constant="20"/>
-                            <constraint id="162" firstItem="146" firstAttribute="top" secondItem="144" secondAttribute="bottom" constant="8"/>
                             <constraint id="163" firstItem="146" firstAttribute="leading" secondItem="108" secondAttribute="leading" constant="20"/>
                             <constraint id="170" firstItem="150" firstAttribute="leading" secondItem="108" secondAttribute="leading" constant="20"/>
                             <constraint id="171" firstItem="108" firstAttribute="trailing" secondItem="150" secondAttribute="trailing" constant="20"/>
                             <constraint id="172" firstItem="150" firstAttribute="top" secondItem="148" secondAttribute="bottom" constant="8"/>
                             <constraint id="176" firstItem="147" firstAttribute="leading" secondItem="149" secondAttribute="leading" constant="6"/>
                             <constraint id="177" firstItem="148" firstAttribute="trailing" secondItem="146" secondAttribute="trailing"/>
-                            <constraint id="179" firstItem="145" firstAttribute="leading" secondItem="144" secondAttribute="trailing" constant="8"/>
-                            <constraint id="180" firstItem="145" firstAttribute="leading" secondItem="144" secondAttribute="trailing" constant="8"/>
                             <constraint id="181" firstItem="94" firstAttribute="top" secondItem="151" secondAttribute="bottom" constant="11"/>
                             <constraint id="182" firstItem="151" firstAttribute="leading" secondItem="108" secondAttribute="leading" constant="20"/>
                             <constraint id="183" firstItem="108" firstAttribute="trailing" secondItem="151" secondAttribute="trailing" constant="26"/>
                             <constraint id="184" firstItem="151" firstAttribute="top" secondItem="150" secondAttribute="bottom" constant="8"/>
+                            <constraint id="207" firstItem="144" firstAttribute="top" secondItem="93" secondAttribute="bottom"/>
+                            <constraint id="208" firstItem="144" firstAttribute="leading" secondItem="108" secondAttribute="leading" constant="20"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Backend" id="109"/>
