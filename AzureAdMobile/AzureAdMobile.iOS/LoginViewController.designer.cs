@@ -11,23 +11,27 @@ using UIKit;
 
 namespace AzureAdMobile.iOS
 {
-    [Register ("ViewController")]
-    partial class ViewController
+    [Register ("LoginViewController")]
+    partial class LoginViewController
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextView JsonText { get; set; }
-        [Action ("OnLoginBackendTouchUpInside:")]
+        [Action ("OnAppLoginTouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
-        partial void OnLoginBackendTouchUpInside (UIKit.UIButton sender);
+        partial void OnAppLoginTouchUpInside (UIKit.UIButton sender);
 
-        [Action ("OnLoginAppTouchUpInside:")]
+        [Action ("OnBackendLoginTouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
-        partial void OnLoginAppTouchUpInside (UIKit.UIButton sender);
+        partial void OnBackendLoginTouchUpInside (UIKit.UIButton sender);
 
-        [Action ("OnCompareTokensTouchUpInside:")]
+        [Action ("OnCompareTouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
-        partial void OnCompareTokensTouchUpInside (UIKit.UIButton sender);
+        partial void OnCompareTouchUpInside (UIKit.UIButton sender);
+
+        [Action ("OnLogoutTouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void OnLogoutTouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {

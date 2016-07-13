@@ -1,149 +1,262 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6750" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="96">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6735"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="95">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <tabBarController definesPresentationContext="YES" id="96" sceneMemberID="viewController">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="101">
+                        <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="98" kind="relationship" relationship="viewControllers" id="97"/>
+                        <segue destination="100" kind="relationship" relationship="viewControllers" id="99"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="102" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-289" y="703"/>
+        </scene>
+        <scene sceneID="103">
+            <objects>
+                <viewController id="98" sceneMemberID="viewController" customClass="LoginViewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="91"/>
+                        <viewControllerLayoutGuide type="bottom" id="92"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <view key="view" contentMode="scaleToFill" id="104">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBE-Ac-vcx" misplaced="YES">
-                                <rect key="frame" x="204" y="87" width="152" height="30"/>
-                                <state key="normal" title="Login to Backend">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="OnLoginBackendTouchUpInside:" destination="BYZ-38-t0r" id="11" eventType="touchUpInside"/>
-                                </connections>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <rect key="frame" x="126" y="49" width="119" height="30"/>
-                                    <mask key="constraints">
-                                        <include reference="54"/>
-                                    </mask>
-                                </variation>
-                                <constraints>
-                                    <constraint id="54" firstItem="oBE-Ac-vcx" firstAttribute="width" constant="119"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="54"/>
-                                    </mask>
-                                </variation>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="12" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
-                                <rect key="frame" x="204" y="49" width="152" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="114" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="125" y="20" width="140" height="30"/>
                                 <state key="normal" title="Login to App">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="OnLoginAppTouchUpInside:" destination="BYZ-38-t0r" id="13" eventType="touchUpInside"/>
-                                </connections>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <rect key="frame" x="0.0" y="49" width="119" height="30"/>
-                                    <mask key="constraints">
-                                        <include reference="53"/>
-                                    </mask>
-                                </variation>
                                 <constraints>
-                                    <constraint id="53" firstItem="12" firstAttribute="width" constant="119"/>
+                                    <constraint id="119" firstItem="114" firstAttribute="width" constant="140"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="53"/>
-                                    </mask>
-                                </variation>
+                                <connections>
+                                    <action selector="OnAppLoginTouchUpInside:" destination="98" id="130" eventType="touchUpInside"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="15" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
-                                <rect key="frame" x="204" y="125" width="152" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="115" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="125" y="50" width="140" height="30"/>
+                                <state key="normal" title="Login to Backend">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="122" firstItem="115" firstAttribute="width" constant="140"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="OnBackendLoginTouchUpInside:" destination="98" id="131" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="116" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="125" y="80" width="140" height="30"/>
                                 <state key="normal" title="Compare Tokens">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="OnCompareTokensTouchUpInside:" destination="BYZ-38-t0r" id="16" eventType="touchUpInside"/>
-                                </connections>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <rect key="frame" x="256" y="49" width="119" height="30"/>
-                                    <mask key="constraints">
-                                        <include reference="63"/>
-                                    </mask>
-                                </variation>
                                 <constraints>
-                                    <constraint id="63" firstItem="15" firstAttribute="width" constant="119"/>
+                                    <constraint id="126" firstItem="116" firstAttribute="width" constant="140"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="63"/>
-                                    </mask>
-                                </variation>
+                                <connections>
+                                    <action selector="OnCompareTouchUpInside:" destination="98" id="132" eventType="touchUpInside"/>
+                                </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="35" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
-                                <rect key="frame" x="140" y="163" width="302" height="240"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="117" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="125" y="110" width="140" height="30"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="127" firstItem="117" firstAttribute="width" constant="140"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="OnLogoutTouchUpInside:" destination="98" id="133" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="134" translatesAutoresizingMaskIntoConstraints="NO" text="Console Output..." editable="NO">
+                                <rect key="frame" x="32" y="148" width="311" height="455"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <rect key="frame" x="30" y="93" width="310" height="528"/>
-                                </variation>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint id="46" firstItem="35" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30"/>
-                            <constraint id="47" firstItem="8bC-Xf-vdC" firstAttribute="trailing" secondItem="35" secondAttribute="trailing" constant="35"/>
-                            <constraint id="49" firstItem="8bC-Xf-vdC" firstAttribute="bottom" secondItem="35" secondAttribute="bottom" constant="46"/>
-                            <constraint id="51" firstItem="12" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29"/>
-                            <constraint id="52" firstItem="12" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading"/>
-                            <constraint id="55" firstItem="oBE-Ac-vcx" firstAttribute="leading" secondItem="12" secondAttribute="centerX" constant="66"/>
-                            <constraint id="56" firstItem="oBE-Ac-vcx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29"/>
-                            <constraint id="61" firstItem="15" firstAttribute="leading" secondItem="oBE-Ac-vcx" secondAttribute="centerX" constant="70"/>
-                            <constraint id="62" firstItem="15" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29"/>
-                            <constraint id="64" firstItem="35" firstAttribute="top" secondItem="oBE-Ac-vcx" secondAttribute="bottom" constant="14"/>
+                            <constraint id="118" firstItem="114" firstAttribute="centerX" secondItem="104" secondAttribute="centerX" constant="7"/>
+                            <constraint id="120" firstItem="114" firstAttribute="top" secondItem="91" secondAttribute="bottom"/>
+                            <constraint id="121" firstItem="115" firstAttribute="centerX" secondItem="104" secondAttribute="centerX" constant="7"/>
+                            <constraint id="123" firstItem="115" firstAttribute="top" secondItem="114" secondAttribute="bottom"/>
+                            <constraint id="124" firstItem="116" firstAttribute="centerX" secondItem="104" secondAttribute="centerX" constant="7"/>
+                            <constraint id="125" firstItem="116" firstAttribute="top" secondItem="115" secondAttribute="bottom"/>
+                            <constraint id="128" firstItem="117" firstAttribute="centerX" secondItem="104" secondAttribute="centerX" constant="7"/>
+                            <constraint id="129" firstItem="117" firstAttribute="top" secondItem="116" secondAttribute="bottom"/>
+                            <constraint id="135" firstItem="134" firstAttribute="top" secondItem="117" secondAttribute="bottom" constant="8"/>
+                            <constraint id="136" firstItem="92" firstAttribute="top" secondItem="134" secondAttribute="bottom" constant="15"/>
+                            <constraint id="137" firstItem="104" firstAttribute="trailing" secondItem="134" secondAttribute="trailing" constant="32"/>
+                            <constraint id="138" firstItem="134" firstAttribute="leading" secondItem="104" secondAttribute="leading" constant="32"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="46"/>
-                                <exclude reference="47"/>
-                                <exclude reference="49"/>
-                                <exclude reference="51"/>
-                                <exclude reference="52"/>
-                                <exclude reference="55"/>
-                                <exclude reference="56"/>
-                                <exclude reference="61"/>
-                                <exclude reference="62"/>
-                                <exclude reference="64"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="constraints">
-                                <include reference="46"/>
-                                <include reference="47"/>
-                                <include reference="49"/>
-                                <include reference="51"/>
-                                <include reference="52"/>
-                                <include reference="55"/>
-                                <include reference="56"/>
-                                <include reference="61"/>
-                                <include reference="62"/>
-                                <include reference="64"/>
-                            </mask>
-                        </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Login" id="105"/>
                     <connections>
-                        <outlet property="JsonText" destination="35" id="name-outlet-35"/>
+                        <outlet property="JsonText" destination="134" id="name-outlet-134"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="106" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="241" y="376"/>
+        </scene>
+        <scene sceneID="107">
+            <objects>
+                <viewController id="100" sceneMemberID="viewController" customClass="BackendViewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="93"/>
+                        <viewControllerLayoutGuide type="bottom" id="94"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="108">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="144" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="20" width="166" height="30"/>
+                                <state key="normal" title="Login to App">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="166" firstItem="144" firstAttribute="height" constant="30"/>
+                                    <constraint id="185" firstItem="144" firstAttribute="width" constant="166"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="OnAppLoginTouchUpInside:" destination="100" id="191" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="145" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="194" y="20" width="161" height="30"/>
+                                <state key="normal" title="Login to Backend">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="167" firstItem="145" firstAttribute="height" constant="30"/>
+                                    <constraint id="186" firstItem="145" firstAttribute="width" constant="161"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="OnBackendLoginTouchUpInside:" destination="100" id="192" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="146" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="58" width="166" height="30"/>
+                                <state key="normal" title="Basic Group">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="164" firstItem="146" firstAttribute="height" constant="30"/>
+                                    <constraint id="190" firstItem="146" firstAttribute="width" constant="166"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="OnBasicGroupTouchUpInside:" destination="100" id="193" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="147" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="194" y="58" width="161" height="30"/>
+                                <state key="normal" title="Basic Role">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="168" firstItem="147" firstAttribute="height" constant="30"/>
+                                    <constraint id="187" firstItem="147" firstAttribute="width" constant="161"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="OnBasicRoleTouchUpInside:" destination="100" id="194" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="148" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="96" width="166" height="30"/>
+                                <state key="normal" title="Elevated Group">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="165" firstItem="148" firstAttribute="height" constant="30"/>
+                                    <constraint id="189" firstItem="148" firstAttribute="width" constant="166"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="OnElevatedGroupTouchUpInside:" destination="100" id="195" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="149" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="188" y="96" width="161" height="30"/>
+                                <state key="normal" title="Elevated Role">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="169" firstItem="149" firstAttribute="height" constant="30"/>
+                                    <constraint id="188" firstItem="149" firstAttribute="width" constant="161"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="OnElevatedRoleTouchUpInside:" destination="100" id="196" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="150" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="20" y="134" width="335" height="30"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <constraints>
+                                    <constraint id="173" firstItem="150" firstAttribute="height" constant="30"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="OnLogoutTouchUpInside:" destination="100" id="198" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="151" translatesAutoresizingMaskIntoConstraints="NO" text="Console Output..." editable="NO">
+                                <rect key="frame" x="20" y="172" width="329" height="435"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <constraints>
+                            <constraint id="152" firstItem="144" firstAttribute="top" secondItem="93" secondAttribute="bottom"/>
+                            <constraint id="153" firstItem="144" firstAttribute="leading" secondItem="108" secondAttribute="leading" constant="20"/>
+                            <constraint id="154" firstItem="145" firstAttribute="top" secondItem="93" secondAttribute="bottom"/>
+                            <constraint id="155" firstItem="108" firstAttribute="trailing" secondItem="145" secondAttribute="trailing" constant="20"/>
+                            <constraint id="156" firstItem="147" firstAttribute="top" secondItem="145" secondAttribute="bottom" constant="8"/>
+                            <constraint id="157" firstItem="108" firstAttribute="trailing" secondItem="147" secondAttribute="trailing" constant="20"/>
+                            <constraint id="158" firstItem="149" firstAttribute="top" secondItem="147" secondAttribute="bottom" constant="8"/>
+                            <constraint id="159" firstItem="108" firstAttribute="trailing" secondItem="149" secondAttribute="trailing" constant="26"/>
+                            <constraint id="160" firstItem="148" firstAttribute="top" secondItem="146" secondAttribute="bottom" constant="8"/>
+                            <constraint id="161" firstItem="148" firstAttribute="leading" secondItem="108" secondAttribute="leading" constant="20"/>
+                            <constraint id="162" firstItem="146" firstAttribute="top" secondItem="144" secondAttribute="bottom" constant="8"/>
+                            <constraint id="163" firstItem="146" firstAttribute="leading" secondItem="108" secondAttribute="leading" constant="20"/>
+                            <constraint id="170" firstItem="150" firstAttribute="leading" secondItem="108" secondAttribute="leading" constant="20"/>
+                            <constraint id="171" firstItem="108" firstAttribute="trailing" secondItem="150" secondAttribute="trailing" constant="20"/>
+                            <constraint id="172" firstItem="150" firstAttribute="top" secondItem="148" secondAttribute="bottom" constant="8"/>
+                            <constraint id="176" firstItem="147" firstAttribute="leading" secondItem="149" secondAttribute="leading" constant="6"/>
+                            <constraint id="177" firstItem="148" firstAttribute="trailing" secondItem="146" secondAttribute="trailing"/>
+                            <constraint id="179" firstItem="145" firstAttribute="leading" secondItem="144" secondAttribute="trailing" constant="8"/>
+                            <constraint id="180" firstItem="145" firstAttribute="leading" secondItem="144" secondAttribute="trailing" constant="8"/>
+                            <constraint id="181" firstItem="94" firstAttribute="top" secondItem="151" secondAttribute="bottom" constant="11"/>
+                            <constraint id="182" firstItem="151" firstAttribute="leading" secondItem="108" secondAttribute="leading" constant="20"/>
+                            <constraint id="183" firstItem="108" firstAttribute="trailing" secondItem="151" secondAttribute="trailing" constant="26"/>
+                            <constraint id="184" firstItem="151" firstAttribute="top" secondItem="150" secondAttribute="bottom" constant="8"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Backend" id="109"/>
+                    <connections>
+                        <outlet property="JsonText" destination="151" id="name-outlet-151"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="110" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="241" y="1029"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
