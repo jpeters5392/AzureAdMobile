@@ -1,4 +1,5 @@
 ﻿using System;
+using AzureAdMobile.iOS.Auth;
 using Microsoft.IdentityModel.Clients.ActiveDirectory;
 using Newtonsoft.Json.Linq;
 using UIKit;
@@ -9,9 +10,11 @@ namespace AzureAdMobile.iOS
 	{
 		public static AuthenticationResult currentBackendAuthResult = null;
 		public static AuthenticationResult currentAppAuthResult = null;
+		private PersistentTokenCache tokenCache = null;
 
 		public AuthUtility()
 		{
+			this.tokenCache = new PersistentTokenCache();
 		}
 
 		public JObject ParseAuthResult(AuthenticationResult authResult)
@@ -25,6 +28,11 @@ namespace AzureAdMobile.iOS
 			authData.Add("UserInfo.GivenName", authResult.UserInfo.GivenName);
 			authData.Add("UserInfo.DisplayableId", authResult.UserInfo.DisplayableId);
 			return authData;
+		}
+
+		public void Clear()
+		{
+			this.tokenCache.Clear();
 		}
 
 		public async void PerformAuth(UIViewController currentViewController, UITextView console, PlatformParameters platformParameters, string resourceUri, bool isBackend)
@@ -47,7 +55,7 @@ namespace AzureAdMobile.iOS
 					authResult = currentAppAuthResult;
 				}
 
-				var authContext = new AuthenticationContext(string.Format(AzureConstants.AzureAuthority, AzureConstants.AzureTenantId));
+				var authContext = new AuthenticationContext(string.Format(AzureConstants.AzureAuthority, AzureConstants.AzureTenantId), this.tokenCache);
 
 				try
 				{

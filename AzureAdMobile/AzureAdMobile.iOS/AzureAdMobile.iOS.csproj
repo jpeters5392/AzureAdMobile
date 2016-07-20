@@ -166,9 +166,11 @@
     <Compile Include="BackendViewController.designer.cs">
       <DependentUpon>BackendViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Auth\PersistentTokenCache.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Utilities\" />
+    <Folder Include="Auth\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

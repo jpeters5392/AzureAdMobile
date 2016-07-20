@@ -160,7 +160,8 @@ namespace AzureAdMobile.iOS
 
 		partial void OnLogoutTouchUpInside(UIButton sender)
 		{
-			TokenCache.DefaultShared.Clear();
+			AuthUtility authUtility = new AuthUtility();
+			authUtility.Clear();
 			AuthUtility.currentAppAuthResult = null;
 			AuthUtility.currentBackendAuthResult = null;
 
