@@ -35,12 +35,14 @@ namespace AzureAdMobile.Droid.Fragments
 		protected AuthenticationResult currentAppAuthResult;
 		protected AuthenticationResult currentBackendAuthResult;
 		protected IPlatformParameters platformParameters;
+		protected PersistentTokenCache tokenCache;
 
 		public override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 
 			this.platformParameters = new PlatformParameters(this.Activity);
+			this.tokenCache = new PersistentTokenCache();
 
 			// Create your fragment here
 		}
@@ -122,7 +124,7 @@ namespace AzureAdMobile.Droid.Fragments
 			CookieManager.Instance.RemoveAllCookie();
 
 			// now clear the local token cache
-			TokenCache.DefaultShared.Clear();
+			this.tokenCache.Clear();
 
 			this.currentBackendAuthResult = null;
 			this.currentAppAuthResult = null;
@@ -135,7 +137,7 @@ namespace AzureAdMobile.Droid.Fragments
 
 		protected async Task<AuthenticationResult> PerformAuth(string resourceId)
 		{
-			var authContext = new AuthenticationContext(string.Format(AzureConstants.AzureAuthority, AzureConstants.AzureTenantId));
+			var authContext = new AuthenticationContext(string.Format(AzureConstants.AzureAuthority, AzureConstants.AzureTenantId), this.tokenCache);
 
 			try
 			{
